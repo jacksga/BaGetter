@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using BaGetter.Protocol;
 using BaGetter.Protocol.Models;
 using Microsoft.Extensions.Logging;
-using NuGet.Protocol.Core.Types;
 using NuGet.Versioning;
 
 namespace BaGetter.Core;

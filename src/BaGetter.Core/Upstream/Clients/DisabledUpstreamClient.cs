@@ -34,6 +34,6 @@ public class DisabledUpstreamClient : IUpstreamClient
 
     public string GetServiceIndexUrl()
     {
-        return "http://disabled.upstream.client";
+        return "https://disabled-upstream-client.example.org";
     }
 }
