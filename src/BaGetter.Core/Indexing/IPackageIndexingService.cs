@@ -6,7 +6,7 @@ namespace BaGetter.Core;
 
 /// <summary>
 /// The result of attempting to index a package.
-/// See <see cref="IPackageIndexingService.IndexAsync(Stream, CancellationToken)"/>.
+/// See <see cref="IPackageIndexingService.IndexAsync(Stream, string, CancellationToken)"/>.
 /// </summary>
 public enum PackageIndexingResult
 {
@@ -35,8 +35,8 @@ public interface IPackageIndexingService
     /// Attempt to index a new package.
     /// </summary>
     /// <param name="stream">The stream containing the package's content.</param>
-    /// <param name="mirrorFeedUrl">The url of the feed the package has been mirrored in case of mirroring, else null.</param>
+    /// <param name="cacheFeedUrl">The url of the feed the package has been cached from in case of pull through caching, else null.</param>
     /// <param name="cancellationToken"></param>
     /// <returns>The result of the attempted indexing operation.</returns>
-    Task<PackageIndexingResult> IndexAsync(Stream stream, string mirrorFeedUrl = null, CancellationToken cancellationToken = default);
+    Task<PackageIndexingResult> IndexAsync(Stream stream, string cacheFeedUrl = null, CancellationToken cancellationToken = default);
 }
